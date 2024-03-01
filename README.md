@@ -1,9 +1,6 @@
-# EXPERIMENT-NO--03-PRESSURE-MEASUREMENT-USING-ARDUINO-AIM-To-interface-an-FSR-force-sensitive-resistor
+# EXPERIMENT-NO--03-PRESSURE-MEASUREMENT-USING-ARDUINO
 
-# DATE :
-# NAME :
-# ROLLNUMBER :
-# DEPARTMENT
+
 ## AIM: 
 To interface an FSR(force sensitive resistor) and scale the output voltage obtained to pressure applied 
  
@@ -48,22 +45,13 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 ****Where R= 1KΩ in this experiment 
 ****That is, the voltage is proportional to the inverse of the FSR resistance.
 
-
-
-
-
-
-
-
-
-
 ![image](https://user-images.githubusercontent.com/36288975/163532979-a2a5cb5c-f495-442c-843e-bebb82737a35.png)
 
-
+### Circuit Representation :
+![op](./A1.png)
+![schematic view](https://github.com/ragulmani936/EXPERIMENT-NO--04-PRESSURE-MEASUREMENT-USING-ARDUINO-AIM-To-interface-an-FSR-force-sensitive-resist/assets/94881918/227e8c76-eb6c-47a1-8cba-6a376f822559)
 
 ### FIGURE-03 CIRCUIT DIAGRAM
-
-
 
 ### PROCEDURE:
 1.	Connect the circuit as per the circuit diagram 
@@ -79,26 +67,43 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 
 ### PROGRAM 
- *your roll no 
- * your name 
- * department and year 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+#### Name : Ragul M
+#### Register Number : 212221230080
+```
+int LED = 7;
+int FSR;
 
-![image](https://user-images.githubusercontent.com/36288975/188804653-a3154e8e-2655-46f2-9dcd-f425dd1ba109.png)
+void setup()
+{
+  pinMode(LED, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  FSR = analogRead(A0);
+  Serial.print("Raw Value = ");
+  Serial.println(FSR);
+  delay(500);
+  int m;
+  m=map(FSR,0,159,0,10);
+  Serial.print("Mapped Value = ");
+  Serial.println(m);
+  
+  if(FSR>50)
+  {
+    digitalWrite(LED,LOW);
+    delay(500);
+    digitalWrite(LED,HIGH);
+    delay(500);
+  }
+}
+
+```
+### Comparison of Applied and mapped forces :
+ ![opo](./aa1.png)
+ ![op](./aa2.png)
+
 
 
 ### TABLE -02 standard deviation table 
@@ -119,17 +124,22 @@ EX:           μ = (1+3+4+7+8) / 5 = 4.6
 σ = √(12.96 + 2.56 + 0.36 + 5.76 + 11.56)/5 = 2.577
 
 
+### Sample Reading : 
+```
+μ = ( 1.05 + 2.05 + 3.09 + 4.03 + 5.09 + 6.12 + 7.09 + 8.12 + 9.22 + 10) / 10
+  = 5.586
+
+σ = √[(2 - 5.586)^2 + (3 - 5.586)^2 + ... + (10 - 5.586)^2]/10
+σ = √(456.859396)/10 = 2.137426948
+
+
+```
+### Stimulation Output : 
+ ![op](./a5.png)
+
+ ![op](./a6.png)
 
 
 
-
-
-
-
-
-
-
-
-
-
-### RESULTS : Arduino uno is interfaced with FSR and output values are indicated on a graph.
+### RESULTS : 
+Arduino uno is interfaced with FSR and output values are indicated on a graph.
