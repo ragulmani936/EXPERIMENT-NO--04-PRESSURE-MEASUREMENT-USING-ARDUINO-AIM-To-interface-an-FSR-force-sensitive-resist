@@ -101,8 +101,11 @@ void loop()
 
 ```
 ### Comparison of Applied and mapped forces :
- ![opo](./aa1.png)
- ![op](./aa2.png)
+ ![img1](https://github.com/ragulmani936/EXPERIMENT-NO--04-PRESSURE-MEASUREMENT-USING-ARDUINO-AIM-To-interface-an-FSR-force-sensitive-resist/assets/94881918/8c7b1979-fd68-4c3f-bc0d-9443e6df76bc)
+
+
+ ![img2](https://github.com/ragulmani936/EXPERIMENT-NO--04-PRESSURE-MEASUREMENT-USING-ARDUINO-AIM-To-interface-an-FSR-force-sensitive-resist/assets/94881918/b322fcfe-a72c-4d34-87c5-f0bbee741518)
+
 
 
 
@@ -135,9 +138,11 @@ EX:           μ = (1+3+4+7+8) / 5 = 4.6
 
 ```
 ### Stimulation Output : 
- ![op](./a5.png)
 
- ![op](./a6.png)
+ ![img3](https://github.com/ragulmani936/EXPERIMENT-NO--04-PRESSURE-MEASUREMENT-USING-ARDUINO-AIM-To-interface-an-FSR-force-sensitive-resist/assets/94881918/5a0bd174-cfa1-476e-b3c5-80f94299ff2c)
+
+
+![img4](https://github.com/ragulmani936/EXPERIMENT-NO--04-PRESSURE-MEASUREMENT-USING-ARDUINO-AIM-To-interface-an-FSR-force-sensitive-resist/assets/94881918/24899851-5920-46da-a636-261b5bec619f)
 
 
 
